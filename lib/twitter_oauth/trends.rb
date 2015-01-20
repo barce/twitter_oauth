@@ -6,8 +6,8 @@ module TwitterOAuth
     # objects that encode the name of the trending topic, the query parameter
     # that can be used to search for the topic on Twitter Search, and the
     # Twitter Search URL....
-    def place_trends
-      get("/trends/place.json")
+    def place_trends id
+      get("/trends/place.json?id=#{id}")
     end
 
     # Returns the locations that Twitter has trending topic information for. The
